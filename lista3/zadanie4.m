@@ -4,9 +4,9 @@ ImageRaw = reshape(ImageRaw, size(ImageRaw, 1)*size(ImageRaw, 2), size(ImageRaw,
 
 labels = kmeans(ImageRaw', 3);
 
-colors = [255,0,0; 0,255,0; 0,0,255];
+colors = [1,0,0; 0,1,0; 0,1,1];
 
 Image = colors(labels,:);
 Image = reshape(Image, 1500, 1000, size(Image,2));
 
-imwrite(Image, 'zdjecie.jpg', 'jpg');
+imwrite(Image, 'zdjecie1.jpg', 'jpg');
