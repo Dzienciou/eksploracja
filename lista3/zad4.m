@@ -1,4 +1,5 @@
 function[labels] = kmeans(k, X)
-	centers = ceil(k*rand(1, n))
-	labels=centers
+	n = size(X, 2);
+	centers = ceil(k*rand(1, n));
+	labels=centers;
 end
