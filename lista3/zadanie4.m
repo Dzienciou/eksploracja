@@ -2,11 +2,11 @@ ImageRaw = multibandread('/pio/scratch/2/ED2015/APEX/APEX_OSD_Package_1.0/APEX_O
 ImageRaw = reshape(ImageRaw, size(ImageRaw, 1)*size(ImageRaw, 2), size(ImageRaw, 3));
 
 
-labels = kmeans(ImageRaw', 6);
+labels = kmeans(ImageRaw', 8);
 
-colors = [1,0,0; 1, 1, 0; 1, 1, 1; 0,1,0; 0,1,1; 0, 0, 1];
+colors = [1,0,0; 1, 1, 0; 1, 1, 1; 0, 1, 0; 0, 1, 1; 0, 0, 1; 0, 0, 0; 1, 0, 1 ];
 
 Image = colors(labels,:);
 Image = reshape(Image, 1500, 1000, size(Image,2));
 
-imwrite(Image, 'zdjecie2.jpg', 'jpg');
+imwrite(Image, 'zdjecie3.jpg', 'jpg');
